@@ -9,7 +9,13 @@ import UIKit
 
 class ExploreViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
+    @IBOutlet weak var collectionView: UICollectionView!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+    }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
@@ -29,20 +35,10 @@ class ExploreViewController: UIViewController, UICollectionViewDataSource, UICol
         
     }
     
-    
-    
-    @IBOutlet weak var collectionView: UICollectionView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-     
-    }
-    
-    
-    
     @IBAction func unwindLocationCancel(segue: UIStoryboardSegue){
         
     }
+    
+    
     
 }

@@ -12,6 +12,9 @@
 		88559BA32766459900C79B40 /* ExploreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88559BA22766459900C79B40 /* ExploreDataManager.swift */; };
 		88559BA627664F6D00C79B40 /* ExploreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88559BA527664F6D00C79B40 /* ExploreCell.swift */; };
 		885B7C762763A9DD00E3F0AA /* RestaurantListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885B7C752763A9DD00E3F0AA /* RestaurantListViewController.swift */; };
+		886CDD8D2767835A001D8157 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886CDD8C2767835A001D8157 /* LocationViewController.swift */; };
+		886CDD9127678E29001D8157 /* Locations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 886CDD9027678E29001D8157 /* Locations.plist */; };
+		886CDD932767931D001D8157 /* LocationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886CDD922767931D001D8157 /* LocationDataManager.swift */; };
 		887586C72762393C007B081D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887586C62762393C007B081D /* AppDelegate.swift */; };
 		887586C92762393C007B081D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887586C82762393C007B081D /* SceneDelegate.swift */; };
 		887586CE2762393C007B081D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 887586CC2762393C007B081D /* Main.storyboard */; };
@@ -26,6 +29,9 @@
 		88559BA22766459900C79B40 /* ExploreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreDataManager.swift; sourceTree = "<group>"; };
 		88559BA527664F6D00C79B40 /* ExploreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCell.swift; sourceTree = "<group>"; };
 		885B7C752763A9DD00E3F0AA /* RestaurantListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListViewController.swift; sourceTree = "<group>"; };
+		886CDD8C2767835A001D8157 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		886CDD9027678E29001D8157 /* Locations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Locations.plist; path = "../../../../../../iOS-14-Programming-for-Beginner-Fifth-Edition-master-2/Chapter15/LetsEat/LetsEat/Location/Model/Locations.plist"; sourceTree = "<group>"; };
+		886CDD922767931D001D8157 /* LocationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataManager.swift; sourceTree = "<group>"; };
 		887586C32762393C007B081D /* RogavaLetsEat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RogavaLetsEat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		887586C62762393C007B081D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		887586C82762393C007B081D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +79,32 @@
 			path = Restaurants;
 			sourceTree = "<group>";
 		};
+		886CDD8927678299001D8157 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				886CDD8A276782BB001D8157 /* Model */,
+				886CDD8B276782C6001D8157 /* View */,
+				886CDD8C2767835A001D8157 /* LocationViewController.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		886CDD8A276782BB001D8157 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				886CDD9027678E29001D8157 /* Locations.plist */,
+				886CDD922767931D001D8157 /* LocationDataManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		886CDD8B276782C6001D8157 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		887586BA2762393C007B081D = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +124,7 @@
 		887586C52762393C007B081D /* RogavaLetsEat */ = {
 			isa = PBXGroup;
 			children = (
+				886CDD8927678299001D8157 /* Location */,
 				88559B9D2766410E00C79B40 /* Model */,
 				885B7C742763A97300E3F0AA /* Restaurants */,
 				887586DA27624C6B007B081D /* Explore */,
@@ -175,6 +208,7 @@
 				88559B9F2766413600C79B40 /* ExploreData.plist in Resources */,
 				887586D32762393E007B081D /* LaunchScreen.storyboard in Resources */,
 				887586D02762393E007B081D /* Assets.xcassets in Resources */,
+				886CDD9127678E29001D8157 /* Locations.plist in Resources */,
 				887586CE2762393C007B081D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -193,6 +227,8 @@
 				887586DC27624D5A007B081D /* ExploreViewController.swift in Sources */,
 				88559BA32766459900C79B40 /* ExploreDataManager.swift in Sources */,
 				88559BA627664F6D00C79B40 /* ExploreCell.swift in Sources */,
+				886CDD932767931D001D8157 /* LocationDataManager.swift in Sources */,
+				886CDD8D2767835A001D8157 /* LocationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

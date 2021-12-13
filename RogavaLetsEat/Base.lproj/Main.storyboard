@@ -447,17 +447,17 @@
             </objects>
             <point key="canvasLocation" x="1911.594202898551" y="-368.30357142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Location View Controller-->
         <scene sceneID="sT6-Gb-ZCK">
             <objects>
-                <viewController id="xjz-JG-M8g" sceneMemberID="viewController">
+                <viewController id="xjz-JG-M8g" customClass="LocationViewController" customModule="RogavaLetsEat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ryg-97-jMP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bBU-wh-ZO7">
                                 <rect key="frame" x="0.0" y="56" width="414" height="786"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.66231344260000002" green="0.5646849384" blue="0.975941956" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="sectionIndexBackgroundColor" red="0.45044191919191912" green="0.32821320866209669" blue="0.42249413305375166" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="locationCell" textLabel="5Xq-V5-77d" style="IBUITableViewCellStyleDefault" id="0r7-GS-024">
@@ -478,6 +478,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="xjz-JG-M8g" id="tae-hQ-5Am"/>
+                                    <outlet property="delegate" destination="xjz-JG-M8g" id="aDo-0n-ufD"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="i3d-VU-fnK"/>
@@ -497,6 +501,9 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="IEd-J9-Nc7"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="bBU-wh-ZO7" id="48M-aw-g7N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Yp-dE-Y53" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="ERf-LH-Kfb" userLabel="Exit" sceneMemberID="exit"/>

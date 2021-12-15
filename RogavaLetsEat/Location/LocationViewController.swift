@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LocationViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class LocationViewController: UIViewController, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -15,9 +15,24 @@ class LocationViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        manager.fetch()
-        
+        initialize()
     }
+    
+}
+
+
+
+// MARK: Private Extension
+private extension LocationViewController {
+    
+    func initialize(){
+        manager.fetch()
+    }
+}
+
+
+// MARK: UICollectionViewDataSource
+extension LocationViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         manager.numberOfItems()
@@ -32,9 +47,6 @@ class LocationViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
 }
-
-
-
 
 
 

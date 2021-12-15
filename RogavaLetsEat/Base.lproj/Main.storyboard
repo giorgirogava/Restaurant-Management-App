@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="Tdv-5V-C6c">
             <objects>
-                <viewController id="l1j-nd-NFB" sceneMemberID="viewController">
+                <viewController id="l1j-nd-NFB" customClass="MapViewController" customModule="RogavaLetsEat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FM1-Ij-gqA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,10 +32,24 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="SaW-Dw-2Rt"/>
+                    <connections>
+                        <outlet property="mapView" destination="mLj-hG-hOn" id="6cw-jW-Tyr"/>
+                        <segue destination="7t5-V6-Pr4" kind="show" identifier="showDetail" id="fGC-tt-wcc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O1u-hl-rwE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1912" y="786"/>
+        </scene>
+        <!--RestaurantDetail-->
+        <scene sceneID="hYy-gO-HCU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="RestaurantDetail" id="7t5-V6-Pr4" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="SCd-m6-i1A"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4VH-wP-8xD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2680" y="785"/>
         </scene>
         <!--Restaurant List View Controller-->
         <scene sceneID="be3-mX-BiG">

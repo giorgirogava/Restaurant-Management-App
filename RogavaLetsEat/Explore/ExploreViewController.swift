@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ExploreViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class ExploreViewController: UIViewController, UICollectionViewDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -16,10 +16,30 @@ class ExploreViewController: UIViewController, UICollectionViewDataSource, UICol
     override func viewDidLoad() {
         
         super.viewDidLoad()
-       
-        manager.fetch()
+        
+        initialize()
         
     }
+}
+
+// MARK: Private Extension
+
+private extension ExploreViewController {
+    
+    func initialize() {
+        manager.fetch()
+    }
+    
+    @IBAction func unwindLocationCancel(segue: UIStoryboardSegue){
+        
+    }
+    
+}
+
+
+// MARK: UICollectionViewDataSource
+
+extension ExploreViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
@@ -42,11 +62,12 @@ class ExploreViewController: UIViewController, UICollectionViewDataSource, UICol
         return cell
         
     }
-    
-    @IBAction func unwindLocationCancel(segue: UIStoryboardSegue){
-        
-    }
-    
-    
-    
 }
+
+
+
+
+
+
+
+

@@ -69,7 +69,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="restaurantCell" id="pgi-tn-WCa">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="restaurantCell" id="pgi-tn-WCa" customClass="RestaurantCell" customModule="RogavaLetsEat" customModuleProvider="target">
                                         <rect key="frame" x="39.5" y="0.0" width="335" height="312"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Xpl-UA-rwK">
@@ -186,6 +186,9 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
+                                            <outlet property="imgRestaurant" destination="dA3-Qq-h8l" id="9ea-J2-r79"/>
+                                            <outlet property="lblCuisine" destination="a3k-bQ-CJk" id="7dx-Og-VOX"/>
+                                            <outlet property="lblTitle" destination="YcO-xn-bMQ" id="h1d-yI-IEb"/>
                                             <segue destination="ros-ns-ZOr" kind="show" id="3ww-sS-mi2"/>
                                         </connections>
                                     </collectionViewCell>
@@ -365,11 +368,11 @@
                                         <connections>
                                             <outlet property="IbIName" destination="wMx-hn-UAj" id="xh4-Ff-8i0"/>
                                             <outlet property="imgExplore" destination="HPt-KM-Neg" id="YVU-zS-AZM"/>
-                                            <segue destination="ya0-74-wlh" kind="show" id="GzN-si-aDn"/>
+                                            <segue destination="ya0-74-wlh" kind="show" identifier="restaurantList" id="GzN-si-aDn"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
-                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="header" id="xqB-Dw-Sdi">
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="header" id="xqB-Dw-Sdi" customClass="ExploreHeaderView" customModule="RogavaLetsEat" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -403,7 +406,7 @@
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="btn-location"/>
                                                     <connections>
-                                                        <segue destination="MQI-Dp-2Df" kind="presentation" id="G3J-jX-11c"/>
+                                                        <segue destination="MQI-Dp-2Df" kind="presentation" identifier="locationList" id="G3J-jX-11c"/>
                                                     </connections>
                                                 </button>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="exZ-DT-qf4">
@@ -436,6 +439,9 @@
                                         <constraint firstAttribute="trailing" secondItem="8rC-5L-LHG" secondAttribute="trailing" id="QGp-Th-i4r"/>
                                         <constraint firstItem="8rC-5L-LHG" firstAttribute="top" secondItem="xqB-Dw-Sdi" secondAttribute="top" id="g1o-fP-0O8"/>
                                     </constraints>
+                                    <connections>
+                                        <outlet property="lblLocation" destination="TpE-ex-Xri" id="iMI-f8-TxW"/>
+                                    </connections>
                                 </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="fMC-UK-xie" id="iHD-Da-Uf2"/>
@@ -513,7 +519,11 @@
                                 <segue destination="ERf-LH-Kfb" kind="unwind" unwindAction="unwindLocationCancelWithSegue:" id="mMp-9n-w2o"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="IEd-J9-Nc7"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="IEd-J9-Nc7">
+                            <connections>
+                                <segue destination="ERf-LH-Kfb" kind="unwind" unwindAction="unwindLocationDoneWithSegue:" id="8Fc-nt-9xD"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="bBU-wh-ZO7" id="48M-aw-g7N"/>

@@ -13,15 +13,30 @@ class RestaurantListViewController: UIViewController,  UICollectionViewDelegate 
     var selectedCity: LocationItem?
     var selectedType: String?
     
-    
     @IBOutlet var collectionView: UICollectionView!
     
-    
     override func viewDidLoad() {
-        
         super.viewDidLoad()
+        }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let identifier = segue.identifier {
+            
+            switch identifier {
+                
+            case Segue.showDetail.rawValue:
+                showRestaurantDetail(segue:segue)
+                
+            default:
+                print("Segue not added")
+                
+            }
+            
+        }
         
     }
+    
     
     override func viewDidAppear(_ animated: Bool) {
         
@@ -30,11 +45,26 @@ class RestaurantListViewController: UIViewController,  UICollectionViewDelegate 
         setupTitle()
         
     }
+    
 }
 
 
 // MARK: Private Extension
 private extension RestaurantListViewController {
+    
+    
+    func showRestaurantDetail(segue: UIStoryboardSegue) {
+        
+        if let viewController = segue.destination as? RestaurantDetailViewController, let index = collectionView.indexPathsForSelectedItems?.first {
+            
+            selectedRestaurant = manager.restaurantItem(at: index)
+            
+            viewController.selectedRestaurant = selectedRestaurant
+            
+        }
+        
+    }
+    
     
     func createData() {
         

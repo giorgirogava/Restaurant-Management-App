@@ -29,7 +29,6 @@ class MapViewController: UIViewController {
             print("Segue not added")
         }
     }
-    
 }
 
 

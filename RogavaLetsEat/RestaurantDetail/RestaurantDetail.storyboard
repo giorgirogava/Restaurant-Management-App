@@ -194,7 +194,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pgj-Bj-2jp">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pgj-Bj-2jp" customClass="RatingsView" customModule="RogavaLetsEat" customModuleProvider="target">
                                                     <rect key="frame" x="151" y="43" width="205" height="34"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -344,7 +344,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhO-2v-lBq">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Photos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhO-2v-lBq">
                                                     <rect key="frame" x="15" y="9" width="345" height="28"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="28" id="9rS-Fh-Y84"/>
@@ -465,6 +465,7 @@
                         <outlet property="lblName" destination="6er-aK-n02" id="X46-MR-xoU"/>
                         <outlet property="lblOverallRating" destination="zON-CP-XRT" id="iQ2-BC-uGA"/>
                         <outlet property="lblTableDetails" destination="QHZ-op-gz0" id="Exn-LR-JzD"/>
+                        <outlet property="ratingsView" destination="Pgj-Bj-2jp" id="WoY-xe-fKl"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xbX-wO-Y8z" userLabel="First Responder" sceneMemberID="firstResponder"/>

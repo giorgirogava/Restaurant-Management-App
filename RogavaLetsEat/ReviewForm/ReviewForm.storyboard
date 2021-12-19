@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hS7-gB-9nH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hS7-gB-9nH">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,10 +23,10 @@
             </objects>
             <point key="canvasLocation" x="4190" y="-832"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Review Form View Controller-->
         <scene sceneID="2Lj-qr-Q1h">
             <objects>
-                <tableViewController id="FMe-3H-aSV" sceneMemberID="viewController">
+                <tableViewController id="FMe-3H-aSV" customClass="ReviewFormViewController" customModule="RogavaLetsEat" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="wbQ-Yd-wf4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,7 +35,7 @@
                             <tableViewSection id="m9J-z2-nSp">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="50" id="34l-DA-RF7">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="50"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="34l-DA-RF7" id="d3B-hd-HXi">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
@@ -51,7 +51,7 @@
                                                     <color key="textColor" red="0.69019607839999997" green="0.71764705880000002" blue="0.73725490199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jgv-x1-Dm8" customClass="RatingsView" customModule="LetsEat" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jgv-x1-Dm8" customClass="RatingsView" customModule="RogavaLetsEat" customModuleProvider="target">
                                                     <rect key="frame" x="133.5" y="7" width="108" height="17"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -69,7 +69,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="2YE-Oa-JxA">
-                                        <rect key="frame" x="0.0" y="78" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="94.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2YE-Oa-JxA" id="ZIl-a9-Dxq">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -92,7 +92,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="BjV-lr-ecm">
-                                        <rect key="frame" x="0.0" y="122" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="138.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BjV-lr-ecm" id="K0N-Cu-alU">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -115,7 +115,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="190" id="7X4-DY-g2v">
-                                        <rect key="frame" x="0.0" y="166" width="375" height="190"/>
+                                        <rect key="frame" x="0.0" y="182.5" width="375" height="190"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7X4-DY-g2v" id="kZ2-KW-l8E">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="190"/>
@@ -143,16 +143,26 @@
                     <navigationItem key="navigationItem" id="HhK-Tr-uQT">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="DoS-wK-OFu">
                             <connections>
-                                <segue destination="Wbq-hq-Or1" kind="unwind" unwindAction="unwindReviewCancelWithSegue:" id="RfM-9X-IEh"/>
+                                <segue destination="Wbq-hq-Or1" kind="unwind" unwindAction="unwindLocationCancelWithSegue:" id="ejg-qu-YRP"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="yDv-S1-VFB"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="yDv-S1-VFB">
+                            <connections>
+                                <action selector="onSaveTapped:" destination="FMe-3H-aSV" id="tsM-ol-7GQ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="ratingsView" destination="Jgv-x1-Dm8" id="asV-uY-8nc"/>
+                        <outlet property="tfName" destination="uwv-vD-pti" id="n4M-N5-dpr"/>
+                        <outlet property="tfTitle" destination="jdr-kq-Djw" id="JdI-PX-3hG"/>
+                        <outlet property="tvReview" destination="mfP-Ls-LpI" id="m3j-FC-4KM"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eoT-q7-XLM" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Wbq-hq-Or1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4924" y="-833"/>
+            <point key="canvasLocation" x="4887" y="-833"/>
         </scene>
     </scenes>
     <resources>

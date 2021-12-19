@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88299C0A276F8236005ED960 /* ReviewFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88299C09276F8236005ED960 /* ReviewFormViewController.swift */; };
 		8846F856276CDDAE00F11D12 /* NoDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8846F855276CDDAE00F11D12 /* NoDataView.swift */; };
 		8846F858276CDEB400F11D12 /* NoDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8846F857276CDEB400F11D12 /* NoDataView.xib */; };
+		8854A1CD276E43A100FD1330 /* RatingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8854A1CC276E43A100FD1330 /* RatingsView.swift */; };
 		88559B9F2766413600C79B40 /* ExploreData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88559B9E2766413600C79B40 /* ExploreData.plist */; };
 		88559BA12766428F00C79B40 /* ExploreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88559BA02766428F00C79B40 /* ExploreItem.swift */; };
 		88559BA32766459900C79B40 /* ExploreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88559BA22766459900C79B40 /* ExploreDataManager.swift */; };
@@ -55,8 +57,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		88299C09276F8236005ED960 /* ReviewFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewFormViewController.swift; sourceTree = "<group>"; };
 		8846F855276CDDAE00F11D12 /* NoDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDataView.swift; sourceTree = "<group>"; };
 		8846F857276CDEB400F11D12 /* NoDataView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoDataView.xib; sourceTree = "<group>"; };
+		8854A1CC276E43A100FD1330 /* RatingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsView.swift; sourceTree = "<group>"; };
 		88559B9E2766413600C79B40 /* ExploreData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ExploreData.plist; sourceTree = "<group>"; };
 		88559BA02766428F00C79B40 /* ExploreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreItem.swift; sourceTree = "<group>"; };
 		88559BA22766459900C79B40 /* ExploreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreDataManager.swift; sourceTree = "<group>"; };
@@ -260,6 +264,8 @@
 			isa = PBXGroup;
 			children = (
 				888E79C32768F45600671BF9 /* ReviewForm.storyboard */,
+				8854A1CC276E43A100FD1330 /* RatingsView.swift */,
+				88299C09276F8236005ED960 /* ReviewFormViewController.swift */,
 			);
 			path = ReviewForm;
 			sourceTree = "<group>";
@@ -413,7 +419,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88299C0A276F8236005ED960 /* ReviewFormViewController.swift in Sources */,
 				88D14F39276A4B1E0049554F /* LocationItem.swift in Sources */,
+				8854A1CD276E43A100FD1330 /* RatingsView.swift in Sources */,
 				88D14F3B276A54880049554F /* ExploreHeaderView.swift in Sources */,
 				88559BA12766428F00C79B40 /* ExploreItem.swift in Sources */,
 				888E79BC2768DB9600671BF9 /* DataManager.swift in Sources */,

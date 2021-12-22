@@ -13,12 +13,15 @@ class RestaurantDetailViewController: UITableViewController {
     @IBOutlet weak var btnHeart: UIBarButtonItem!
     
     @IBOutlet weak var lblName: UILabel!
+    
     @IBOutlet weak var lblCuisine: UILabel!
+    
     @IBOutlet weak var lblHeaderAddress: UILabel!
     
     @IBOutlet weak var lblTableDetails: UILabel!
     
     @IBOutlet weak var lblOverallRating: UILabel!
+    
     @IBOutlet weak var ratingsView: RatingsView!
     
     @IBOutlet weak var lblAddress: UILabel!
@@ -31,17 +34,82 @@ class RestaurantDetailViewController: UITableViewController {
         
         super.viewDidLoad()
         initialize()
-    
+        
     }
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let identifier = segue.identifier {
+            
+            switch Segue(rawValue: identifier) {
+                
+            case .showReview:
+                showReview(segue: segue)
+                
+                // MARK: bug
+            case .showPhotoFilter:
+                showPhotoFilter(segue: segue)
+                
+            default:
+                print("Segue not added")
+            }
+            
+        }
+    }
+    
 }
 
 private extension RestaurantDetailViewController {
     
     @IBAction func unwindReviewCancel(segue: UIStoryboardSegue) {}
     
+    
+    func showReview(segue: UIStoryboardSegue) {
+        
+        guard let navController = segue.destination as? UINavigationController, let viewController = navController.topViewController as? ReviewFormViewController else {
+            return
+        }
+        
+        viewController.selectedRestaurantID = selectedRestaurant?.restaurantID
+        
+    }
+    
+    func showPhotoFilter(segue:UIStoryboardSegue){
+        
+        guard let navController = segue.destination as? UINavigationController, let viewController = navController.topViewController as? PhotoFilterViewController else {
+            return
+        }
+        
+        viewController.selectedRestaurantID = selectedRestaurant?.restaurantID
+    }
+    
+    
+    
     func createRating() {
-        ratingsView.rating = 3.5
-        ratingsView.isEnabled = true 
+        
+        ratingsView.isEnabled = true
+        
+        if let id = selectedRestaurant?.restaurantID {
+            
+            let value = CoreDataManager.shared.fetchRestaurantRating(by: id)
+            
+            ratingsView.rating = Double(value)
+            
+            if value.isNaN {
+                lblOverallRating.text = "0.0"
+            }
+            
+            else {
+                
+                let roundedValue = ((value * 10).rounded()/10)
+                lblOverallRating.text = "\(roundedValue)"
+                
+            }
+            
+        }
+        
     }
     
     
@@ -53,7 +121,7 @@ private extension RestaurantDetailViewController {
     
     
     func setupLabels(){
-    
+        
         guard let restaurant = selectedRestaurant else {return}
         
         if let name = restaurant.name {
@@ -66,7 +134,7 @@ private extension RestaurantDetailViewController {
         }
         
         if let address = restaurant.address{
-                
+            
             lblAddress.text = address
             lblHeaderAddress.text = address
         }

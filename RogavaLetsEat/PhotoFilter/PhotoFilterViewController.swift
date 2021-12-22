@@ -40,6 +40,23 @@ private extension PhotoFilterViewController {
         checkSource()
     }
     
+    func checkSavedPhoto(){
+        
+        if let img = self.imgExample.image{
+            
+            var item  = RestaurantPhotoItem()
+            
+            item.photo = generate(image: img, ratio: CGFloat(102))
+            item.date = Date()
+            item.restaurantID = selectedRestaurantID
+            
+            CoreDataManager.shared.addPhoto(item)
+            
+            dismiss(animated: true, completion: nil)
+            
+        }
+    }
+    
     
     func setupCollectionView() {
         
@@ -111,6 +128,12 @@ private extension PhotoFilterViewController {
     @IBAction func onPhotoTapped(_ sender: Any) {
         checkSource()
     }
+    
+    @IBAction func onSaveTapped(_ sender: AnyObject) {
+        self.checkSavedPhoto()
+    }
+    
+    
     
     
 }

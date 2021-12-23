@@ -41,8 +41,8 @@ class RestaurantListViewController: UIViewController,  UICollectionViewDelegate 
     override func viewDidAppear(_ animated: Bool) {
         
         super.viewDidAppear(animated)
-        createData()
-        setupTitle()
+       
+        initialize()
         
     }
     
@@ -51,6 +51,30 @@ class RestaurantListViewController: UIViewController,  UICollectionViewDelegate 
 
 // MARK: Private Extension
 private extension RestaurantListViewController {
+    
+    func initialize() {
+        
+        createData()
+        setupTitle()
+        setupCollectionView()
+        
+    }
+    
+    
+    func setupCollectionView() {
+        
+        let flow = UICollectionViewFlowLayout()
+        
+        flow.sectionInset = UIEdgeInsets(top: 7, left: 7, bottom: 7, right: 7)
+        
+        flow.minimumInteritemSpacing = 0
+        
+        flow.minimumLineSpacing = 7
+        
+        collectionView.collectionViewLayout = flow
+        
+    }
+    
     
     
     func showRestaurantDetail(segue: UIStoryboardSegue) {
@@ -139,6 +163,35 @@ extension RestaurantListViewController: UICollectionViewDataSource  {
         }
         
         return cell
+    }
+    
+}
+
+
+extension RestaurantListViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) ->
+    
+    CGSize {
+        
+        var factor: CGFloat = 0
+        
+        if Device.isPad {
+            factor = 3
+        } else {
+            factor = traitCollection.horizontalSizeClass == .compact ? 1:2
+        }
+        
+        let viewWidth = collectionView.frame.size.width
+        
+        let contentWidth = viewWidth - 7 * (factor + 1)
+        
+        let cellWidth = contentWidth / factor
+        
+        let cellHeight = CGFloat(312)
+        
+        return CGSize(width: cellWidth, height: cellHeight)
+        
     }
     
 }

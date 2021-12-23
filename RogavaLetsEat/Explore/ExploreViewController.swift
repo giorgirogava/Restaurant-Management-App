@@ -25,6 +25,13 @@ class ExploreViewController: UIViewController, UICollectionViewDelegate {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         
@@ -63,7 +70,20 @@ class ExploreViewController: UIViewController, UICollectionViewDelegate {
 private extension ExploreViewController {
     
     func initialize() {
+        
         manager.fetch()
+        setupCollectionView()
+        
+    }
+    
+    func setupCollectionView() {
+        
+        let flow = UICollectionViewFlowLayout()
+        flow.sectionInset = UIEdgeInsets(top: 7, left: 7, bottom: 7, right: 7)
+        flow.minimumInteritemSpacing = 0
+        flow.minimumLineSpacing = 7
+        collectionView.collectionViewLayout = flow
+        
     }
     
     func showLocationList(segue:UIStoryboardSegue) {
@@ -158,8 +178,33 @@ extension ExploreViewController: UICollectionViewDataSource {
 
 
 
-
-
-
-
-
+extension ExploreViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        var factor: CGFloat = 2
+        
+        if Device.isPad || (traitCollection.horizontalSizeClass != .compact) {
+            factor = 3
+        }
+        
+        let viewWidth = collectionView.frame.size.width
+        
+        let contentWidth = viewWidth - 7 * (factor + 1)
+        
+        let cellWidth = contentWidth / factor
+        
+        let cellHeight = cellWidth
+        
+        return CGSize(width: cellWidth, height: cellHeight)
+        
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        
+        return CGSize(width: collectionView.frame.width, height: 100)
+    
+    }
+    
+}

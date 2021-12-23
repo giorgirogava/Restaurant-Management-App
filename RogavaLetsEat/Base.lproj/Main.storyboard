@@ -94,7 +94,7 @@
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Xn-vq-Q7w">
                                                                     <rect key="frame" x="0.0" y="0.0" width="68" height="27"/>
                                                                     <state key="normal" title="Button"/>
-                                                                    <buttonConfiguration key="configuration" style="plain" title="7:30pm">
+                                                                    <buttonConfiguration key="configuration" style="plain" title="7:00pm">
                                                                         <backgroundConfiguration key="background" image="time-bg"/>
                                                                         <fontDescription key="titleFontDescription" type="boldSystem" pointSize="11"/>
                                                                         <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -112,7 +112,7 @@
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psy-7e-VWb">
                                                                     <rect key="frame" x="156" y="0.0" width="68" height="27"/>
                                                                     <state key="normal" title="Button"/>
-                                                                    <buttonConfiguration key="configuration" style="plain" title="7:30pm">
+                                                                    <buttonConfiguration key="configuration" style="plain" title="7:45pm">
                                                                         <backgroundConfiguration key="background" image="time-bg"/>
                                                                         <fontDescription key="titleFontDescription" type="boldSystem" pointSize="11"/>
                                                                         <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -362,7 +362,7 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mEn-do-38J"/>
-                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <color key="backgroundColor" name="Light Gray"/>
                         <constraints>
                             <constraint firstItem="mEn-do-38J" firstAttribute="bottom" secondItem="q0I-zG-WCi" secondAttribute="bottom" id="ebl-ZS-K8B"/>
                             <constraint firstItem="q0I-zG-WCi" firstAttribute="top" secondItem="mEn-do-38J" secondAttribute="top" id="h6K-Wb-tpL"/>
@@ -389,7 +389,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bBU-wh-ZO7">
                                 <rect key="frame" x="0.0" y="56" width="414" height="786"/>
-                                <color key="backgroundColor" red="0.66231344260000002" green="0.5646849384" blue="0.975941956" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.94346797875664046" green="0.87726495494628653" blue="0.975941956" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="sectionIndexBackgroundColor" red="0.45044191919191912" green="0.32821320866209669" blue="0.42249413305375166" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="locationCell" textLabel="5Xq-V5-77d" style="IBUITableViewCellStyleDefault" id="0r7-GS-024">
@@ -538,9 +538,6 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

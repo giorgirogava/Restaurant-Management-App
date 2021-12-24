@@ -28,6 +28,16 @@
 		885A38A22770EAC900E38603 /* ReviewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885A38A12770EAC900E38603 /* ReviewItem.swift */; };
 		885A38A42770EC2000E38603 /* RestaurantPhotoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885A38A32770EC2000E38603 /* RestaurantPhotoItem.swift */; };
 		885B7C762763A9DD00E3F0AA /* RestaurantListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885B7C752763A9DD00E3F0AA /* RestaurantListViewController.swift */; };
+		885EE774277616FF0045C510 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 885EE773277616FF0045C510 /* WidgetKit.framework */; };
+		885EE776277616FF0045C510 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 885EE775277616FF0045C510 /* SwiftUI.framework */; };
+		885EE779277616FF0045C510 /* RogavaLetsEatWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885EE778277616FF0045C510 /* RogavaLetsEatWidget.swift */; };
+		885EE77B277617010045C510 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 885EE77A277617010045C510 /* Assets.xcassets */; };
+		885EE77F277617010045C510 /* RogavaLetsEatWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 885EE771277616FF0045C510 /* RogavaLetsEatWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		885EE78527761A8D0045C510 /* MapDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888E79B82768D6E300671BF9 /* MapDataManager.swift */; };
+		885EE78627761AB60045C510 /* RestaurantItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CCFBB62767AA0500EBFBA9 /* RestaurantItem.swift */; };
+		885EE78727761ADF0045C510 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888E79BB2768DB9600671BF9 /* DataManager.swift */; };
+		885EE78827761AF80045C510 /* Boston.json in Resources */ = {isa = PBXBuildFile; fileRef = 88D14F24276A3AB50049554F /* Boston.json */; };
+		885EE78927761B1C0045C510 /* RestaurantDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D14F36276A3E360049554F /* RestaurantDataManager.swift */; };
 		886CDD8D2767835A001D8157 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886CDD8C2767835A001D8157 /* LocationViewController.swift */; };
 		886CDD9127678E29001D8157 /* Locations2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 886CDD9027678E29001D8157 /* Locations2.plist */; };
 		886CDD932767931D001D8157 /* LocationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886CDD922767931D001D8157 /* LocationDataManager.swift */; };
@@ -69,6 +79,30 @@
 		88D14F3B276A54880049554F /* ExploreHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D14F3A276A54880049554F /* ExploreHeaderView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		885EE77D277617010045C510 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 887586BB2762393C007B081D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 885EE770277616FF0045C510;
+			remoteInfo = RogavaLetsEatWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		885EE781277617010045C510 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				885EE77F277617010045C510 /* RogavaLetsEatWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		88299C09276F8236005ED960 /* ReviewFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewFormViewController.swift; sourceTree = "<group>"; };
 		88299C0D276F897D005ED960 /* FilterData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FilterData.plist; sourceTree = "<group>"; };
@@ -92,6 +126,13 @@
 		885A38A12770EAC900E38603 /* ReviewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewItem.swift; sourceTree = "<group>"; };
 		885A38A32770EC2000E38603 /* RestaurantPhotoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantPhotoItem.swift; sourceTree = "<group>"; };
 		885B7C752763A9DD00E3F0AA /* RestaurantListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListViewController.swift; sourceTree = "<group>"; };
+		885EE771277616FF0045C510 /* RogavaLetsEatWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RogavaLetsEatWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		885EE773277616FF0045C510 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		885EE775277616FF0045C510 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		885EE778277616FF0045C510 /* RogavaLetsEatWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RogavaLetsEatWidget.swift; sourceTree = "<group>"; };
+		885EE77A277617010045C510 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		885EE77C277617010045C510 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		885EE780277617010045C510 /* RogavaLetsEatWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RogavaLetsEatWidgetExtension.entitlements; sourceTree = "<group>"; };
 		886CDD8C2767835A001D8157 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		886CDD9027678E29001D8157 /* Locations2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Locations2.plist; path = "../../../../../../iOS-14-Programming-for-Beginner-Fifth-Edition-master-2/Chapter15/LetsEat/LetsEat/Location/Model/Locations2.plist"; sourceTree = "<group>"; };
 		886CDD922767931D001D8157 /* LocationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataManager.swift; sourceTree = "<group>"; };
@@ -136,6 +177,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		885EE76E277616FF0045C510 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				885EE776277616FF0045C510 /* SwiftUI.framework in Frameworks */,
+				885EE774277616FF0045C510 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		887586C02762393C007B081D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -221,6 +271,25 @@
 			path = Restaurants;
 			sourceTree = "<group>";
 		};
+		885EE772277616FF0045C510 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				885EE773277616FF0045C510 /* WidgetKit.framework */,
+				885EE775277616FF0045C510 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		885EE777277616FF0045C510 /* RogavaLetsEatWidget */ = {
+			isa = PBXGroup;
+			children = (
+				885EE778277616FF0045C510 /* RogavaLetsEatWidget.swift */,
+				885EE77A277617010045C510 /* Assets.xcassets */,
+				885EE77C277617010045C510 /* Info.plist */,
+			);
+			path = RogavaLetsEatWidget;
+			sourceTree = "<group>";
+		};
 		886CDD8927678299001D8157 /* Location */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,7 +321,10 @@
 		887586BA2762393C007B081D = {
 			isa = PBXGroup;
 			children = (
+				885EE780277617010045C510 /* RogavaLetsEatWidgetExtension.entitlements */,
 				887586C52762393C007B081D /* RogavaLetsEat */,
+				885EE777277616FF0045C510 /* RogavaLetsEatWidget */,
+				885EE772277616FF0045C510 /* Frameworks */,
 				887586C42762393C007B081D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -261,6 +333,7 @@
 			isa = PBXGroup;
 			children = (
 				887586C32762393C007B081D /* RogavaLetsEat.app */,
+				885EE771277616FF0045C510 /* RogavaLetsEatWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -402,6 +475,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		885EE770277616FF0045C510 /* RogavaLetsEatWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 885EE784277617010045C510 /* Build configuration list for PBXNativeTarget "RogavaLetsEatWidgetExtension" */;
+			buildPhases = (
+				885EE76D277616FF0045C510 /* Sources */,
+				885EE76E277616FF0045C510 /* Frameworks */,
+				885EE76F277616FF0045C510 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RogavaLetsEatWidgetExtension;
+			productName = RogavaLetsEatWidgetExtension;
+			productReference = 885EE771277616FF0045C510 /* RogavaLetsEatWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		887586C22762393C007B081D /* RogavaLetsEat */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 887586D72762393E007B081D /* Build configuration list for PBXNativeTarget "RogavaLetsEat" */;
@@ -409,10 +499,12 @@
 				887586BF2762393C007B081D /* Sources */,
 				887586C02762393C007B081D /* Frameworks */,
 				887586C12762393C007B081D /* Resources */,
+				885EE781277617010045C510 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				885EE77E277617010045C510 /* PBXTargetDependency */,
 			);
 			name = RogavaLetsEat;
 			productName = RogavaLetsEat;
@@ -429,6 +521,9 @@
 				LastSwiftUpdateCheck = 1310;
 				LastUpgradeCheck = 1310;
 				TargetAttributes = {
+					885EE770277616FF0045C510 = {
+						CreatedOnToolsVersion = 13.1;
+					};
 					887586C22762393C007B081D = {
 						CreatedOnToolsVersion = 13.1;
 					};
@@ -448,11 +543,21 @@
 			projectRoot = "";
 			targets = (
 				887586C22762393C007B081D /* RogavaLetsEat */,
+				885EE770277616FF0045C510 /* RogavaLetsEatWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		885EE76F277616FF0045C510 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				885EE78827761AF80045C510 /* Boston.json in Resources */,
+				885EE77B277617010045C510 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		887586C12762393C007B081D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -489,6 +594,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		885EE76D277616FF0045C510 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				885EE78927761B1C0045C510 /* RestaurantDataManager.swift in Sources */,
+				885EE78527761A8D0045C510 /* MapDataManager.swift in Sources */,
+				885EE78727761ADF0045C510 /* DataManager.swift in Sources */,
+				885EE78627761AB60045C510 /* RestaurantItem.swift in Sources */,
+				885EE779277616FF0045C510 /* RogavaLetsEatWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		887586BF2762393C007B081D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -532,6 +649,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		885EE77E277617010045C510 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 885EE770277616FF0045C510 /* RogavaLetsEatWidgetExtension */;
+			targetProxy = 885EE77D277617010045C510 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		887586CC2762393C007B081D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -552,6 +677,64 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		885EE782277617010045C510 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = RogavaLetsEatWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X5ZN89H2U2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RogavaLetsEatWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = RogavaLetsEatWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.George.RogavaLetsEat.RogavaLetsEatWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		885EE783277617010045C510 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = RogavaLetsEatWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X5ZN89H2U2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RogavaLetsEatWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = RogavaLetsEatWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.George.RogavaLetsEat.RogavaLetsEatWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		887586D52762393E007B081D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -671,6 +854,7 @@
 		887586D82762393E007B081D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = RogavaLetsEat/RogavaLetsEat.entitlements;
@@ -702,6 +886,7 @@
 		887586D92762393E007B081D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = RogavaLetsEat/RogavaLetsEat.entitlements;
@@ -733,6 +918,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		885EE784277617010045C510 /* Build configuration list for PBXNativeTarget "RogavaLetsEatWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				885EE782277617010045C510 /* Debug */,
+				885EE783277617010045C510 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		887586BE2762393C007B081D /* Build configuration list for PBXProject "RogavaLetsEat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

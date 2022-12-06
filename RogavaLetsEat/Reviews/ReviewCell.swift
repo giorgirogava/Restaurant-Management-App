@@ -1,9 +1,3 @@
-//
-//  ReviewCell.swift
-//  RogavaLetsEat
-//
-//  Created by IMAC on 22.12.21.
-//
 
 import UIKit
 
